@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - PrintWear</title>
+  <meta name="description" content="Lihat hasil karya terbaik dari PrintWear - jasa sablon dan bordir berkualitas dengan harga terjangkau.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tambahan CSS untuk portofolio -->
+  <style>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+    }
+    
+    .portfolio-item {
+      background-color: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .portfolio-image {
+      height: 250px;
+      overflow: hidden;
+    }
+    
+    .portfolio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .portfolio-item:hover .portfolio-image img {
+      transform: scale(1.05);
+    }
+    
+    .portfolio-info {
+      padding: var(--spacing-md);
+    }
+    
+    .portfolio-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .portfolio-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .portfolio-tag {
+      background-color: var(--gray-lightest);
+      color: var(--gray-dark);
+      font-size: 0.75rem;
+      padding: 2px var(--spacing-sm);
+      border-radius: var(--radius-sm);
+    }
+
+    .portfolio-desc {
+      color: var(--gray);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    
+    .portfolio-filter {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .portfolio-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+            <li><a href="index.html#products" class="nav-link">Produk</a></li>
+            <li><a href="index.html#customization" class="nav-link">Kustomisasi</a></li>
+            <li><a href="portofolio.html" class="nav-link">Portofolio</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+            <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+            <li>
+              <button id="cartButton" class="btn btn-primary cart-btn">
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                Keranjang <span id="cartCount" class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Portfolio Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Portofolio</h1>
+        <p>Koleksi hasil karya terbaik dari PrintWear yang telah kami kerjakan untuk klien kami.</p>
+      </div>
+    </section>
+
+    <!-- Portfolio Content -->
+    <section class="section portfolio">
+      <div class="container">
+        <div class="portfolio-filter">
+          <h3>Filter Karya</h3>
+          <div class="portfolio-categories" id="portfolioCategories">
+            <button class="filter-btn active" data-category="all">Semua Karya</button>
+            <button class="filter-btn" data-category="sablon">Sablon</button>
+            <button class="filter-btn" data-category="bordir">Bordir</button>
+            <button class="filter-btn" data-category="corporate">Korporat</button>
+            <button class="filter-btn" data-category="event">Event</button>
+            <button class="filter-btn" data-category="merchandise">Merchandise</button>
+          </div>
+        </div>
+        
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Portfolio Item 1 -->
+          <div class="portfolio-item" data-category="sablon event">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" alt="Kaos Event Musik">
+            </div>
+            <div class="portfolio-info">
+              <h3>Kaos Event Musik</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Sablon</span>
+                <span class="portfolio-tag">Event</span>
+              </div>
+              <p class="portfolio-desc">Sablon kaos untuk acara festival musik tahunan di Jakarta dengan desain yang colorful dan eye-catching.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 2 -->
+          <div class="portfolio-item" data-category="bordir corporate">
+            <div class="portfolio-image">
+              <img src="BUMN.jpg" alt="Seragam Korporat">
+            </div>
+            <div class="portfolio-info">
+              <h3>Seragam Korporat</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Bordir</span>
+                <span class="portfolio-tag">Korporat</span>
+              </div>
+              <p class="portfolio-desc">Bordir logo perusahaan pada polo shirt untuk seragam karyawan sebuah perusahaan teknologi.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 3 -->
+          <div class="portfolio-item" data-category="sablon merchandise">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" alt="Merchandise Brand Lokal">
+            </div>
+            <div class="portfolio-info">
+              <h3>Merchandise Brand Lokal</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Sablon</span>
+                <span class="portfolio-tag">Merchandise</span>
+              </div>
+              <p class="portfolio-desc">Produksi merchandise untuk brand fashion lokal dengan teknik sablon premium.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 4 -->
+          <div class="portfolio-item" data-category="bordir merchandise">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" alt="Topi Bordir Custom">
+            </div>
+            <div class="portfolio-info">
+              <h3>Topi Bordir Custom</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Bordir</span>
+                <span class="portfolio-tag">Merchandise</span>
+              </div>
+              <p class="portfolio-desc">Koleksi topi dengan bordir custom untuk merchandise brand coffee shop.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 5 -->
+          <div class="portfolio-item" data-category="sablon event">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1520013573795-38516d2661e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" alt="Kaos Fun Run">
+            </div>
+            <div class="portfolio-info">
+              <h3>Kaos Fun Run</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Sablon</span>
+                <span class="portfolio-tag">Event</span>
+              </div>
+              <p class="portfolio-desc">Produksi kaos untuk event fun run charity dengan desain yang colorful dan motif yang menarik.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 6 -->
+          <div class="portfolio-item" data-category="bordir corporate">
+            <div class="portfolio-image">
+              <img src="BORDIR.webp" alt="Kemeja Bordir Staff Hotel">
+            </div>
+            <div class="portfolio-info">
+              <h3>Kemeja Bordir Staff Hotel</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Bordir</span>
+                <span class="portfolio-tag">Korporat</span>
+              </div>
+              <p class="portfolio-desc">Kemeja dengan bordir logo dan nama untuk staff hotel berbintang lima di Bali.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 7 -->
+          <div class="portfolio-item" data-category="sablon merchandise">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" alt="Hoodie Brand Fashion">
+            </div>
+            <div class="portfolio-info">
+              <h3>Hoodie Brand Fashion</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Sablon</span>
+                <span class="portfolio-tag">Merchandise</span>
+              </div>
+              <p class="portfolio-desc">Koleksi hoodie dengan sablon premium untuk brand fashion street wear lokal.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 8 -->
+          <div class="portfolio-item" data-category="sablon event">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1564859228273-274232fdb516?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" alt="Kaos Komunitas Sepeda">
+            </div>
+            <div class="portfolio-info">
+              <h3>Kaos Komunitas Sepeda</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Sablon</span>
+                <span class="portfolio-tag">Event</span>
+              </div>
+              <p class="portfolio-desc">Kaos jersey untuk komunitas sepeda dengan desain custom dan bahan yang nyaman.</p>
+            </div>
+          </div>
+          
+          <!-- Portfolio Item 9 -->
+          <div class="portfolio-item" data-category="bordir merchandise">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1625204614387-6509254d5b02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" alt="Tote Bag Bordir">
+            </div>
+            <div class="portfolio-info">
+              <h3>Tote Bag Bordir</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-tag">Bordir</span>
+                <span class="portfolio-tag">Merchandise</span>
+              </div>
+              <p class="portfolio-desc">Koleksi tote bag dengan bordir minimalist untuk merchandise toko buku.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </div>
+          <p>Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama kami.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h4>Navigasi</h4>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#customization">Kustomisasi</a></li>
+              <li><a href="portofolio.html">Portofolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="index.html#about">Tentang Kami</a></li>
+              <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Sablon DTG</a></li>
+              <li><a href="#">Sablon Manual</a></li>
+              <li><a href="#">Bordir Komputer</a></li>
+              <li><a href="#">Desain Grafis</a></li>
+              <li><a href="#">Pembuatan Merchandise</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Cara Pemesanan</a></li>
+              <li><a href="#">Pengiriman</a></li>
+              <li><a href="#">Pembayaran</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <p>&copy; <span id="currentYear"></span> PrintWear. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal (sama seperti di index.html) -->
+  <div id="cartModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Keranjang Belanja</h3>
+        <button class="close-button" id="closeCartBtn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items will be displayed here -->
+          <div class="empty-cart">
+            <svg class="empty-cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <p>Keranjang belanja Anda kosong</p>
+          </div>
+        </div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">Rp 0</span>
+          </div>
+          <div class="summary-row">
+            <span>Biaya lainnya</span>
+            <span id="shippingFee">Rp 10.000</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cartTotal">Rp 10.000</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-block" id="checkoutBtn">Lanjutkan ke Pembayaran</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    // Portfolio filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const portfolioCategories = document.getElementById('portfolioCategories');
+      const portfolioFilterButtons = portfolioCategories.querySelectorAll('.filter-btn');
+      const portfolioItems = document.querySelectorAll('.portfolio-item');
+      
+      portfolioFilterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const category = this.dataset.category;
+          
+          // Update active class
+          portfolioFilterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter portfolio items
+          portfolioItems.forEach(item => {
+            const itemCategories = item.dataset.category.split(' ');
+            
+            if (category === 'all' || itemCategories.includes(category)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

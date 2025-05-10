@@ -1,896 +1,827 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrintWear - Sablon & Bordir Terbaik</title>
-    <meta name="description"
-        content="Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama PrintWear.">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="PrintWear - Sablon & Bordir Terbaik">
-    <meta property="og:description"
-        content="Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama PrintWear.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://printwear.id">
-    <meta property="og:image"
-        content="https://pixabay.com/get/g483878da985264bcedcab6c5b68599cd12bfbb13f7c7ece70df77d22d75b70fd6f5ed62547c8d12566375114a15117a4a5ac4bdb34590ec2a2d22dc9229482bc_1280.jpg">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrintWear - Sablon & Bordir Terbaik</title>
+  <meta name="description" content="Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama PrintWear.">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="PrintWear - Sablon & Bordir Terbaik">
+  <meta property="og:description" content="Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama PrintWear.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://printwear.id">
+  <meta property="og:image" content="https://pixabay.com/get/g483878da985264bcedcab6c5b68599cd12bfbb13f7c7ece70df77d22d75b70fd6f5ed62547c8d12566375114a15117a4a5ac4bdb34590ec2a2d22dc9229482bc_1280.jpg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-inner">
-                <div class="logo">
-                    <a href="index.html">
-                        <span>Print<span class="logo-accent">Wear</span></span>
-                    </a>
-                </div>
-
-                <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <nav class="nav" id="mainNav">
-                    <ul class="nav-list">
-                        <li><a href="#home" class="nav-link">Beranda</a></li>
-                        <li><a href="#products" class="nav-link">Produk</a></li>
-                        <li><a href="#customization" class="nav-link">Kustomisasi</a></li>
-                        <li><a href="#about" class="nav-link">Tentang Kami</a></li>
-                        <li><a href="#contact" class="nav-link">Kontak</a></li>
-                        <li>
-                            <button id="cartButton" class="btn btn-primary cart-btn">
-                                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                                </svg>
-                                Keranjang <span id="cartCount" class="cart-count">0</span>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </a>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Kualitas Sablon & Bordir Terbaik</h1>
-                    <p>Wujudkan desain impian Anda dalam bentuk sablon dan bordir berkualitas tinggi.
-                        Pilih dari koleksi desain kami atau unggah desain Anda sendiri.</p>
-                    <div class="hero-buttons">
-                        <a href="#customization" class="btn btn-light">Mulai Desain</a>
-                        <a href="#products" class="btn btn-outline-light">Lihat Produk</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Mengapa Memilih Kami</h2>
-                    <p>Kami menawarkan layanan sablon dan bordir pakaian dengan kualitas terbaik dan harga yang
-                        kompetitif.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>Kualitas Premium</h3>
-                        <p>Kami menggunakan bahan berkualitas tinggi dan teknik printing modern untuk hasil terbaik.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>Desain Kustom</h3>
-                        <p>Buat desain Anda sendiri atau pilih dari koleksi desain kami yang beragam.</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                                <path
-                                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>Pengiriman Cepat</h3>
-                        <p>Proses produksi cepat dan pengiriman ke seluruh Indonesia dengan aman.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Products Section -->
-        <section id="products" class="products">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Katalog Produk</h2>
-                    <p>Pilih dari berbagai model pakaian berkualitas yang siap untuk disablon atau dibordir.</p>
-                </div>
-
-                <div class="category-filter" id="productCategories">
-                    <button class="filter-btn active" data-category="all">Semua Produk</button>
-                    <button class="filter-btn" data-category="tshirt">Kaos</button>
-                    <button class="filter-btn" data-category="polo">Polo Shirt</button>
-                    <button class="filter-btn" data-category="hoodie">Hoodie</button>
-                    <button class="filter-btn" data-category="jacket">Jaket</button>
-                    <button class="filter-btn" data-category="cap">Topi</button>
-                </div>
-
-                <div class="products-grid" id="productsGrid">
-                    <!-- Products will be loaded here via JavaScript -->
-                </div>
-
-                <div class="text-center mt-large">
-                    <button class="btn btn-outline" id="loadMoreProducts">Lihat Lebih Banyak</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Design Gallery Section -->
-        <section class="designs">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Galeri Desain</h2>
-                    <p>Pilih dari berbagai desain menarik yang siap diaplikasikan pada pakaian pilihan Anda.</p>
-                </div>
-
-                <div class="category-filter" id="designCategories">
-                    <button class="filter-btn active" data-category="all">Semua Desain</button>
-                    <button class="filter-btn" data-category="sablon">Sablon</button>
-                    <button class="filter-btn" data-category="bordir">Bordir</button>
-                    <button class="filter-btn" data-category="logo">Logo</button>
-                    <button class="filter-btn" data-category="ilustrasi">Ilustrasi</button>
-                    <button class="filter-btn" data-category="typografi">Typografi</button>
-                </div>
-
-                <div class="designs-grid" id="designsGrid">
-                    <!-- Designs will be loaded here via JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Customization Section -->
-        <section id="customization" class="customization">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Kustomisasi Desain Anda</h2>
-                    <p>Buat desain sablon atau bordir sendiri untuk pakaian pilihan Anda. Upload gambar, tambahkan teks,
-                        dan lihat pratinjau langsung.</p>
-                </div>
-
-                <div class="customization-container">
-                    <div class="customization-form">
-                        <h3>Pilih Produk</h3>
-
-                        <div class="form-group">
-                            <label for="productType">Jenis Produk</label>
-                            <select id="productType" class="form-control">
-                                <option value="tshirt">T-Shirt</option>
-                                <option value="polo">Polo Shirt</option>
-                                <option value="hoodie">Hoodie</option>
-                                <option value="jacket">Jaket</option>
-                                <option value="cap">Topi</option>
-                            </select>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="productColor">Warna</label>
-                                <select id="productColor" class="form-control">
-                                    <option value="black">Hitam</option>
-                                    <option value="white">Putih</option>
-                                    <option value="navy">Navy</option>
-                                    <option value="red">Merah</option>
-                                    <option value="green">Hijau</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="productSize">Ukuran</label>
-                                <select id="productSize" class="form-control">
-                                    <option value="s">S</option>
-                                    <option value="m">M</option>
-                                    <option value="l">L</option>
-                                    <option value="xl">XL</option>
-                                    <option value="xxl">XXL</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <h3>Desain Kustom</h3>
-
-                        <div class="form-group">
-                            <label>Jenis Desain</label>
-                            <div class="radio-group">
-                                <label class="radio-label">
-                                    <input type="radio" name="designType" value="sablon" checked>
-                                    <span>Sablon</span>
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="designType" value="bordir">
-                                    <span>Bordir</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="designPosition">Posisi Desain</label>
-                            <select id="designPosition" class="form-control">
-                                <option value="front">Depan</option>
-                                <option value="back">Belakang</option>
-                                <option value="left-sleeve">Lengan Kiri</option>
-                                <option value="right-sleeve">Lengan Kanan</option>
-                                <option value="pocket">Kantong (jika ada)</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Upload Desain</label>
-                            <div class="upload-area" id="uploadArea">
-                                <div class="upload-content">
-                                    <svg class="upload-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
-                                        </path>
-                                    </svg>
-                                    <p><strong>Klik untuk upload</strong> atau drag and drop</p>
-                                    <p class="upload-info">PNG, JPG, atau SVG (Max. 5MB)</p>
-                                </div>
-                                <input type="file" id="designUpload" accept="image/*" class="file-input">
-                            </div>
-
-                            <div class="text-center mt-medium">
-                                <span>atau</span>
-                            </div>
-
-                            <button id="openGalleryBtn" class="btn btn-outline btn-block">
-                                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                    </path>
-                                </svg>
-                                Pilih dari Galeri Desain
-                            </button>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="customText">Tambahkan Teks (Opsional)</label>
-                            <input type="text" id="customText" class="form-control"
-                                placeholder="Masukkan teks disini...">
-
-                            <div class="form-row mt-small">
-                                <div class="form-group">
-                                    <label for="textFont">Font</label>
-                                    <select id="textFont" class="form-control">
-                                        <option value="arial">Arial</option>
-                                        <option value="roboto">Roboto</option>
-                                        <option value="montserrat">Montserrat</option>
-                                        <option value="poppins">Poppins</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="textColor">Warna</label>
-                                    <select id="textColor" class="form-control">
-                                        <option value="black">Hitam</option>
-                                        <option value="white">Putih</option>
-                                        <option value="red">Merah</option>
-                                        <option value="blue">Biru</option>
-                                        <option value="green">Hijau</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="preview-pane">
-                        <h3>Pratinjau Desain</h3>
-                        <div class="preview-container">
-                            <div class="product-preview" id="productPreview">
-                                <!-- Product image will be displayed here -->
-                                <img id="productImage"
-                                    src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=800"
-                                    alt="Preview T-shirt">
-
-                                <div class="design-overlay" id="designOverlay">
-                                    <!-- Design or text will be displayed here -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="price-container">
-                            <div class="price-label">Total:</div>
-                            <div class="price-value" id="totalPrice">Rp 90.000</div>
-                        </div>
-
-                        <button id="addToCartBtn" class="btn btn-primary btn-block">Tambahkan ke Keranjang</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section class="how-it-works">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Bagaimana Cara Kerjanya</h2>
-                    <p>Proses pemesanan sablon dan bordir yang mudah dan cepat dengan PrintWear.</p>
-                </div>
-
-                <div class="steps-container">
-                    <div class="step">
-                        <div class="step-icon">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>1. Pilih Produk</h3>
-                        <p>Pilih jenis pakaian, warna, dan ukuran yang Anda inginkan.</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-icon">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>2. Desain</h3>
-                        <p>Upload desain, pilih dari galeri, atau tambahkan teks sesuai keinginan.</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-icon">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>3. Pesan</h3>
-                        <p>Tambahkan ke keranjang, isi data pemesanan, dan konfirmasi pesanan.</p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-icon">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3>4. Terima</h3>
-                        <p>Pesanan Anda diproses dan dikirim ke alamat yang ditentukan.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Apa Kata Mereka</h2>
-                    <p>Lihat pengalaman pelanggan kami yang puas dengan layanan PrintWear.</p>
-                </div>
-
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">"Kualitas sablon sangat bagus, tidak luntur meski sudah dicuci
-                            berkali-kali. Proses pemesanan juga sangat mudah dan pengiriman cepat."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
-                                    alt="Avatar">
-                            </div>
-                            <div class="author-info">
-                                <h4>Siti Nuraini</h4>
-                                <p>Jakarta</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">"Pesanan kaos untuk komunitas kami hasilnya sangat memuaskan. Desain
-                            yang dibuat persis seperti yang kami inginkan. Customer service juga sangat responsif."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
-                                    alt="Avatar">
-                            </div>
-                            <div class="author-info">
-                                <h4>Budi Santoso</h4>
-                                <p>Bandung</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star half">★</span>
-                        </div>
-                        <p class="testimonial-text">"Saya memesan hoodie untuk tim kami, bordir logonya sangat halus dan
-                            rapi. Bahan hoodie juga nyaman dipakai. Akan order lagi di sini untuk kebutuhan merchandise
-                            kami."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
-                                    alt="Avatar">
-                            </div>
-                            <div class="author-info">
-                                <h4>Diana Putri</h4>
-                                <p>Surabaya</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <div class="about-container">
-                    <div class="about-content">
-                        <h2>Tentang PrintWear</h2>
-                        <p>PrintWear adalah perusahaan sablon dan bordir pakaian yang berdedikasi untuk memberikan
-                            produk berkualitas tinggi dengan desain kustom yang unik. Didirikan pada tahun 2015, kami
-                            telah melayani ribuan pelanggan dari berbagai kalangan.</p>
-                        <p>Kami menggunakan teknologi printing modern dan bahan berkualitas premium untuk memastikan
-                            hasil yang terbaik. Tim kami terdiri dari desainer berpengalaman dan ahli produksi yang siap
-                            membantu mewujudkan visi desain Anda.</p>
-
-                        <div class="stats-container">
-                            <div class="stat-item">
-                                <span class="stat-value">5000+</span>
-                                <span class="stat-label">Pesanan Selesai</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-value">500+</span>
-                                <span class="stat-label">Klien Puas</span>
-                            </div>
-                        </div>
-
-                        <div class="vision-mission">
-                            <h4>Visi & Misi</h4>
-                            <p>Menjadi perusahaan sablon dan bordir terdepan dengan kualitas produk terbaik dan layanan
-                                pelanggan yang unggul. Kami berkomitmen untuk terus berinovasi dalam teknologi dan
-                                desain untuk memenuhi kebutuhan pelanggan.</p>
-                        </div>
-                    </div>
-
-                    <div class="about-images">
-                        <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
-                            alt="Showroom PrintWear">
-                        <img src="https://pixabay.com/get/g7b7bebc4c1082ea19893b672ccf0aebf8d25559f26a5d45c7abe56ef820f65818acac0353861c2d980b54c4910be4d33facf6ffb0d71e57dcd8ca1e581792c19_1280.jpg"
-                            alt="Tim PrintWear">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Hubungi Kami</h2>
-                    <p>Ada pertanyaan atau ingin konsultasi? Jangan ragu untuk menghubungi kami.</p>
-                </div>
-
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <div class="contact-detail">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                    </path>
-                                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Alamat</h4>
-                                <p>Jl. Pahlawan No. 123, Kota Jakarta Selatan, 12345</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Telepon</h4>
-                                <p>+62 812 3456 7890</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@printwear.id</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-detail">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Jam Operasional</h4>
-                                <p>Senin - Jumat: 08.00 - 17.00<br>Sabtu: 09.00 - 15.00</p>
-                            </div>
-                        </div>
-
-                        <div class="social-media">
-                            <h4>Sosial Media</h4>
-                            <div class="social-icons">
-                                <a href="#" class="social-icon">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z">
-                                        </path>
-                                    </svg>
-                                </a>
-                                <a href="#" class="social-icon">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-container">
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Nama Lengkap</label>
-                                <input type="text" id="name" name="name" class="form-control" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Telepon</label>
-                                <input type="tel" id="phone" name="phone" class="form-control" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="subject">Subjek</label>
-                                <input type="text" id="subject" name="subject" class="form-control" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Pesan</label>
-                                <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <span>Print<span class="logo-accent">Wear</span></span>
-                    </div>
-                    <p>Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama
-                        kami.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-links">
-                    <div class="footer-links-column">
-                        <h4>Navigasi</h4>
-                        <ul>
-                            <li><a href="#home">Beranda</a></li>
-                            <li><a href="#products">Produk</a></li>
-                            <li><a href="#customization">Kustomisasi</a></li>
-                            <li><a href="#about">Tentang Kami</a></li>
-                            <li><a href="#contact">Kontak</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-links-column">
-                        <h4>Layanan</h4>
-                        <ul>
-                            <li><a href="#">Sablon DTG</a></li>
-                            <li><a href="#">Sablon Manual</a></li>
-                            <li><a href="#">Bordir Komputer</a></li>
-                            <li><a href="#">Desain Grafis</a></li>
-                            <li><a href="#">Pembuatan Merchandise</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-links-column">
-                        <h4>Dukungan</h4>
-                        <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Cara Pemesanan</a></li>
-                            <li><a href="#">Pengiriman</a></li>
-                            <li><a href="#">Pembayaran</a></li>
-                            <li><a href="#">Kebijakan Privasi</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-copyright">
-                <p>&copy; <span id="currentYear"></span> PrintWear. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cart Modal -->
-    <div id="cartModal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <div class="modal-header">
-                <h3>Keranjang Belanja</h3>
-                <button class="close-button" id="closeCartBtn">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div id="cartItems" class="cart-items">
-                    <!-- Cart items will be displayed here -->
-                    <div class="empty-cart">
-                        <svg class="empty-cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                            </path>
-                        </svg>
-                        <p>Keranjang belanja Anda kosong</p>
-                    </div>
-                </div>
-                <div class="cart-summary">
-                    <div class="summary-row">
-                        <span>Subtotal</span>
-                        <span id="cartSubtotal">Rp 0</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Biaya lainnya</span>
-                        <span id="shippingFee">Rp 10.000</span>
-                    </div>
-                    <div class="summary-row total">
-                        <span>Total</span>
-                        <span id="cartTotal">Rp 10.000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary btn-block" id="checkoutBtn">Lanjutkan ke Pembayaran</button>
-            </div>
-        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link">Beranda</a></li>
+            <li><a href="#products" class="nav-link">Produk</a></li>
+            <li><a href="#customization" class="nav-link">Kustomisasi</a></li>
+            <li><a href="portofolio.html" class="nav-link">Portofolio</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+            <li><a href="#contact" class="nav-link">Kontak</a></li>
+            <li>
+              <button id="cartButton" class="btn btn-primary cart-btn">
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                Keranjang <span id="cartCount" class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
+  </header>
 
-    <!-- Preview Modal -->
-    <div id="previewModal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container modal-large">
-            <div class="modal-header">
-                <h3>Pratinjau Desain</h3>
-                <button class="close-button" id="closePreviewBtn">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="preview-modal-content">
-                    <div class="preview-image-container">
-                        <div class="product-preview">
-                            <img id="previewProductImage" src="" alt="Preview T-shirt">
-                            <div class="design-overlay" id="previewDesignOverlay">
-                                <!-- Design or text will be displayed here -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="preview-details">
-                        <h4 id="previewProductName">T-Shirt Premium</h4>
-                        <p id="previewProductMaterial" class="preview-material">Bahan: 100% Cotton Combed 30s</p>
-
-                        <div class="preview-info">
-                            <span class="info-label">Warna:</span>
-                            <span id="previewColor">Hitam</span>
-                        </div>
-
-                        <div class="preview-info">
-                            <span class="info-label">Ukuran:</span>
-                            <span id="previewSize">M</span>
-                        </div>
-
-                        <div class="preview-info">
-                            <span class="info-label">Jenis Desain:</span>
-                            <span id="previewDesignType">Sablon</span>
-                        </div>
-
-                        <div class="preview-info">
-                            <span class="info-label">Posisi Desain:</span>
-                            <span id="previewPosition">Depan</span>
-                        </div>
-
-                        <div class="preview-price">
-                            <span class="info-label">Total:</span>
-                            <span id="previewPrice">Rp 90.000</span>
-                        </div>
-
-                        <div class="preview-actions">
-                            <button class="btn btn-outline" id="backToEditBtn">Kembali</button>
-                            <button class="btn btn-primary" id="confirmAddToCartBtn">Tambahkan ke Keranjang</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Kualitas Sablon & Bordir Terbaik</h1>
+          <p>Wujudkan desain impian Anda dalam bentuk sablon dan bordir berkualitas tinggi. 
+            Pilih dari koleksi desain kami atau unggah desain Anda sendiri.</p>
+          <div class="hero-buttons">
+            <a href="#customization" class="btn btn-light">Mulai Desain</a>
+            <a href="#products" class="btn btn-outline-light">Lihat Produk</a>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- Design Gallery Modal -->
-    <div id="galleryModal" class="modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container modal-large">
-            <div class="modal-header">
-                <h3>Pilih Desain dari Galeri</h3>
-                <button class="close-button" id="closeGalleryBtn">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="gallery-filter" id="galleryFilter">
-                    <button class="filter-btn active" data-category="all">Semua</button>
-                    <button class="filter-btn" data-category="sablon">Sablon</button>
-                    <button class="filter-btn" data-category="bordir">Bordir</button>
-                    <button class="filter-btn" data-category="logo">Logo</button>
-                    <button class="filter-btn" data-category="ilustrasi">Ilustrasi</button>
-                </div>
-
-                <div class="gallery-grid" id="galleryGrid">
-                    <!-- Designs will be loaded here via JavaScript -->
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-outline" id="cancelGalleryBtn">Batal</button>
-            </div>
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Mengapa Memilih Kami</h2>
+          <p>Kami menawarkan layanan sablon dan bordir pakaian dengan kualitas terbaik dan harga yang kompetitif.</p>
         </div>
-    </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+              </svg>
+            </div>
+            <h3>Kualitas Premium</h3>
+            <p>Kami menggunakan bahan berkualitas tinggi dan teknik printing modern untuk hasil terbaik.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+              </svg>
+            </div>
+            <h3>Desain Kustom</h3>
+            <p>Buat desain Anda sendiri atau pilih dari koleksi desain kami yang beragam.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+              </svg>
+            </div>
+            <h3>Pengiriman Cepat</h3>
+            <p>Proses produksi cepat dan pengiriman ke seluruh Indonesia dengan aman.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Notification Toast -->
-    <div id="toast" class="toast">
-        <div class="toast-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Katalog Produk</h2>
+          <p>Pilih dari berbagai model pakaian berkualitas yang siap untuk disablon atau dibordir.</p>
+        </div>
+        
+        <div class="category-filter" id="productCategories">
+          <button class="filter-btn active" data-category="all">Semua Produk</button>
+          <button class="filter-btn" data-category="tshirt">Kaos</button>
+          <button class="filter-btn" data-category="polo">Polo Shirt</button>
+          <button class="filter-btn" data-category="hoodie">Hoodie</button>
+          <button class="filter-btn" data-category="jacket">Jaket</button>
+          <button class="filter-btn" data-category="cap">Topi</button>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be loaded here via JavaScript -->
+        </div>
+        
+        <div class="text-center mt-large">
+          <button class="btn btn-outline" id="loadMoreProducts">Lihat Lebih Banyak</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Gallery Section -->
+    <section class="designs">
+      <div class="container">
+        <div class="section-header">
+          <h2>Galeri Desain</h2>
+          <p>Pilih dari berbagai desain menarik yang siap diaplikasikan pada pakaian pilihan Anda.</p>
+        </div>
+        
+        <div class="category-filter" id="designCategories">
+          <button class="filter-btn active" data-category="all">Semua Desain</button>
+          <button class="filter-btn" data-category="sablon">Sablon</button>
+          <button class="filter-btn" data-category="bordir">Bordir</button>
+          <button class="filter-btn" data-category="logo">Logo</button>
+          <button class="filter-btn" data-category="ilustrasi">Ilustrasi</button>
+          <button class="filter-btn" data-category="typografi">Typografi</button>
+        </div>
+        
+        <div class="designs-grid" id="designsGrid">
+          <!-- Designs will be loaded here via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section id="customization" class="customization">
+      <div class="container">
+        <div class="section-header">
+          <h2>Kustomisasi Desain Anda</h2>
+          <p>Buat desain sablon atau bordir sendiri untuk pakaian pilihan Anda. Upload gambar, tambahkan teks, dan lihat pratinjau langsung.</p>
+        </div>
+        
+        <div class="customization-container">
+          <div class="customization-form">
+            <h3>Pilih Produk</h3>
+            
+            <div class="form-group">
+              <label for="productType">Jenis Produk</label>
+              <select id="productType" class="form-control">
+                <option value="tshirt">T-Shirt</option>
+                <option value="polo">Polo Shirt</option>
+                <option value="hoodie">Hoodie</option>
+                <option value="jacket">Jaket</option>
+                <option value="cap">Topi</option>
+              </select>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productColor">Warna</label>
+                <select id="productColor" class="form-control">
+                  <option value="black">Hitam</option>
+                  <option value="white">Putih</option>
+                  <option value="navy">Navy</option>
+                  <option value="red">Merah</option>
+                  <option value="green">Hijau</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="productSize">Ukuran</label>
+                <select id="productSize" class="form-control">
+                  <option value="s">S</option>
+                  <option value="m">M</option>
+                  <option value="l">L</option>
+                  <option value="xl">XL</option>
+                  <option value="xxl">XXL</option>
+                </select>
+              </div>
+            </div>
+            
+            <h3>Desain Kustom</h3>
+            
+            <div class="form-group">
+              <label>Jenis Desain</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="designType" value="sablon" checked>
+                  <span>Sablon</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="designType" value="bordir">
+                  <span>Bordir</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="designPosition">Posisi Desain</label>
+              <select id="designPosition" class="form-control">
+                <option value="front">Depan</option>
+                <option value="back">Belakang</option>
+                <option value="left-sleeve">Lengan Kiri</option>
+                <option value="right-sleeve">Lengan Kanan</option>
+                <option value="pocket">Kantong (jika ada)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Upload Desain</label>
+              <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                  <svg class="upload-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                  </svg>
+                  <p><strong>Klik untuk upload</strong> atau drag and drop</p>
+                  <p class="upload-info">PNG, JPG, atau SVG (Max. 5MB)</p>
+                </div>
+                <input type="file" id="designUpload" accept="image/*" class="file-input">
+              </div>
+              
+              <div class="text-center mt-medium">
+                <span>atau</span>
+              </div>
+              
+              <button id="openGalleryBtn" class="btn btn-outline btn-block">
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                Pilih dari Galeri Desain
+              </button>
+            </div>
+            
+            <div class="form-group">
+              <label for="customText">Tambahkan Teks (Opsional)</label>
+              <input type="text" id="customText" class="form-control" placeholder="Masukkan teks disini...">
+              
+              <div class="form-row mt-small">
+                <div class="form-group">
+                  <label for="textFont">Font</label>
+                  <select id="textFont" class="form-control">
+                    <option value="arial">Arial</option>
+                    <option value="roboto">Roboto</option>
+                    <option value="montserrat">Montserrat</option>
+                    <option value="poppins">Poppins</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="textColor">Warna</label>
+                  <select id="textColor" class="form-control">
+                    <option value="black">Hitam</option>
+                    <option value="white">Putih</option>
+                    <option value="red">Merah</option>
+                    <option value="blue">Biru</option>
+                    <option value="green">Hijau</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="preview-pane">
+            <h3>Pratinjau Desain</h3>
+            <div class="preview-container">
+              <div class="product-preview" id="productPreview">
+                <!-- Product image will be displayed here -->
+                <img id="productImage" src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=800" alt="Preview T-shirt">
+                
+                <div class="design-overlay" id="designOverlay">
+                  <!-- Design or text will be displayed here -->
+                </div>
+              </div>
+            </div>
+            
+            <div class="price-container">
+              <div class="price-label">Total:</div>
+              <div class="price-value" id="totalPrice">Rp 90.000</div>
+            </div>
+            
+            <button id="addToCartBtn" class="btn btn-primary btn-block">Tambahkan ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>Bagaimana Cara Kerjanya</h2>
+          <p>Proses pemesanan sablon dan bordir yang mudah dan cepat dengan PrintWear.</p>
+        </div>
+        
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+              </svg>
+            </div>
+            <h3>1. Pilih Produk</h3>
+            <p>Pilih jenis pakaian, warna, dan ukuran yang Anda inginkan.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+              </svg>
+            </div>
+            <h3>2. Desain</h3>
+            <p>Upload desain, pilih dari galeri, atau tambahkan teks sesuai keinginan.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3>3. Pesan</h3>
+            <p>Tambahkan ke keranjang, isi data pemesanan, dan konfirmasi pesanan.</p>
+          </div>
+          
+          <div class="step">
+            <div class="step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+              </svg>
+            </div>
+            <h3>4. Terima</h3>
+            <p>Pesanan Anda diproses dan dikirim ke alamat yang ditentukan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Apa Kata Mereka</h2>
+          <p>Lihat pengalaman pelanggan kami yang puas dengan layanan PrintWear.</p>
+        </div>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="testimonial-text">"Kualitas sablon sangat bagus, tidak luntur meski sudah dicuci berkali-kali. Proses pemesanan juga sangat mudah dan pengiriman cepat."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+              </div>
+              <div class="author-info">
+                <h4>Siti Nuraini</h4>
+                <p>Jakarta</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="testimonial-text">"Pesanan kaos untuk komunitas kami hasilnya sangat memuaskan. Desain yang dibuat persis seperti yang kami inginkan. Customer service juga sangat responsif."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+              </div>
+              <div class="author-info">
+                <h4>Budi Santoso</h4>
+                <p>Bandung</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star half">★</span>
+            </div>
+            <p class="testimonial-text">"Saya memesan hoodie untuk tim kami, bordir logonya sangat halus dan rapi. Bahan hoodie juga nyaman dipakai. Akan order lagi di sini untuk kebutuhan merchandise kami."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+              </div>
+              <div class="author-info">
+                <h4>Diana Putri</h4>
+                <p>Surabaya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-content">
+            <h2>Tentang PrintWear</h2>
+            <p>PrintWear adalah perusahaan sablon dan bordir pakaian yang berdedikasi untuk memberikan produk berkualitas tinggi dengan desain kustom yang unik. Didirikan pada tahun 2015, kami telah melayani ribuan pelanggan dari berbagai kalangan.</p>
+            <p>Kami menggunakan teknologi printing modern dan bahan berkualitas premium untuk memastikan hasil yang terbaik. Tim kami terdiri dari desainer berpengalaman dan ahli produksi yang siap membantu mewujudkan visi desain Anda.</p>
+            
+            <div class="stats-container">
+              <div class="stat-item">
+                <span class="stat-value">5000+</span>
+                <span class="stat-label">Pesanan Selesai</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">500+</span>
+                <span class="stat-label">Klien Puas</span>
+              </div>
+            </div>
+            
+            <div class="vision-mission">
+              <h4>Visi & Misi</h4>
+              <p>Menjadi perusahaan sablon dan bordir terdepan dengan kualitas produk terbaik dan layanan pelanggan yang unggul. Kami berkomitmen untuk terus berinovasi dalam teknologi dan desain untuk memenuhi kebutuhan pelanggan.</p>
+            </div>
+          </div>
+          
+          <div class="about-images">
+            <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Showroom PrintWear">
+            <img src="https://pixabay.com/get/g7b7bebc4c1082ea19893b672ccf0aebf8d25559f26a5d45c7abe56ef820f65818acac0353861c2d980b54c4910be4d33facf6ffb0d71e57dcd8ca1e581792c19_1280.jpg" alt="Tim PrintWear">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Hubungi Kami</h2>
+          <p>Ada pertanyaan atau ingin konsultasi? Jangan ragu untuk menghubungi kami.</p>
+        </div>
+        
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Alamat</h4>
+                <p>Jl. Pahlawan No. 123, Kota Jakarta Selatan, 12345</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Telepon</h4>
+                <p>+62 812 3456 7890</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>info@printwear.id</p>
+              </div>
+            </div>
+            
+            <div class="contact-detail">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Jam Operasional</h4>
+                <p>Senin - Jumat: 08.00 - 17.00<br>Sabtu: 09.00 - 15.00</p>
+              </div>
+            </div>
+            
+            <div class="social-media">
+              <h4>Sosial Media</h4>
+              <div class="social-icons">
+                <a href="#" class="social-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Telepon</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" id="subject" name="subject" class="form-control" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </div>
+          <p>Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama kami.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h4>Navigasi</h4>
+            <ul>
+              <li><a href="#home">Beranda</a></li>
+              <li><a href="#products">Produk</a></li>
+              <li><a href="#customization">Kustomisasi</a></li>
+              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Sablon DTG</a></li>
+              <li><a href="#">Sablon Manual</a></li>
+              <li><a href="#">Bordir Komputer</a></li>
+              <li><a href="#">Desain Grafis</a></li>
+              <li><a href="#">Pembuatan Merchandise</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Cara Pemesanan</a></li>
+              <li><a href="#">Pengiriman</a></li>
+              <li><a href="#">Pembayaran</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <p>&copy; <span id="currentYear"></span> PrintWear. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Keranjang Belanja</h3>
+        <button class="close-button" id="closeCartBtn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items will be displayed here -->
+          <div class="empty-cart">
+            <svg class="empty-cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
             </svg>
+            <p>Keranjang belanja Anda kosong</p>
+          </div>
         </div>
-        <div class="toast-content" id="toastContent">Berhasil ditambahkan ke keranjang!</div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">Rp 0</span>
+          </div>
+          <div class="summary-row">
+            <span>Biaya lainnya</span>
+            <span id="shippingFee">Rp 10.000</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cartTotal">Rp 10.000</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-block" id="checkoutBtn">Lanjutkan ke Pembayaran</button>
+      </div>
     </div>
+  </div>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+  <!-- Preview Modal -->
+  <div id="previewModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container modal-large">
+      <div class="modal-header">
+        <h3>Pratinjau Desain</h3>
+        <button class="close-button" id="closePreviewBtn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="preview-modal-content">
+          <div class="preview-image-container">
+            <div class="product-preview">
+              <img id="previewProductImage" src="" alt="Preview T-shirt">
+              <div class="design-overlay" id="previewDesignOverlay">
+                <!-- Design or text will be displayed here -->
+              </div>
+            </div>
+          </div>
+          <div class="preview-details">
+            <h4 id="previewProductName">T-Shirt Premium</h4>
+            <p id="previewProductMaterial" class="preview-material">Bahan: 100% Cotton Combed 30s</p>
+            
+            <div class="preview-info">
+              <span class="info-label">Warna:</span>
+              <span id="previewColor">Hitam</span>
+            </div>
+            
+            <div class="preview-info">
+              <span class="info-label">Ukuran:</span>
+              <span id="previewSize">M</span>
+            </div>
+            
+            <div class="preview-info">
+              <span class="info-label">Jenis Desain:</span>
+              <span id="previewDesignType">Sablon</span>
+            </div>
+            
+            <div class="preview-info">
+              <span class="info-label">Posisi Desain:</span>
+              <span id="previewPosition">Depan</span>
+            </div>
+            
+            <div class="preview-price">
+              <span class="info-label">Total:</span>
+              <span id="previewPrice">Rp 90.000</span>
+            </div>
+            
+            <div class="preview-actions">
+              <button class="btn btn-outline" id="backToEditBtn">Kembali</button>
+              <button class="btn btn-primary" id="confirmAddToCartBtn">Tambahkan ke Keranjang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Gallery Modal -->
+  <div id="galleryModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container modal-large">
+      <div class="modal-header">
+        <h3>Pilih Desain dari Galeri</h3>
+        <button class="close-button" id="closeGalleryBtn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="gallery-filter" id="galleryFilter">
+          <button class="filter-btn active" data-category="all">Semua</button>
+          <button class="filter-btn" data-category="sablon">Sablon</button>
+          <button class="filter-btn" data-category="bordir">Bordir</button>
+          <button class="filter-btn" data-category="logo">Logo</button>
+          <button class="filter-btn" data-category="ilustrasi">Ilustrasi</button>
+        </div>
+        
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Designs will be loaded here via JavaScript -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="cancelGalleryBtn">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast">
+    <div class="toast-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+    </div>
+    <div class="toast-content" id="toastContent">Berhasil ditambahkan ke keranjang!</div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - PrintWear</title>
+  <meta name="description" content="Blog PrintWear - Tips dan informasi seputar sablon, bordir, fashion, dan industri garmen.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tambahan CSS untuk blog -->
+  <style>
+    .page-hero {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: var(--spacing-xl) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .page-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .page-hero p {
+      max-width: 600px;
+      opacity: 0.9;
+    }
+    
+    .section {
+      padding: var(--spacing-xxl) 0;
+    }
+    
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+    }
+    
+    .blog-card {
+      background-color: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .blog-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .blog-card:hover .blog-image img {
+      transform: scale(1.05);
+    }
+    
+    .blog-content {
+      padding: var(--spacing-md);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-meta {
+      display: flex;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+    
+    .blog-category {
+      color: var(--primary);
+      font-weight: 500;
+    }
+    
+    .blog-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.4;
+    }
+    
+    .blog-excerpt {
+      color: var(--gray);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .blog-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .blog-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-right: var(--spacing-sm);
+    }
+    
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .author-name {
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    
+    .read-more {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+    
+    .blog-filters {
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .filter-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .blog-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+    }
+    
+    .category-btn {
+      padding: var(--spacing-xs) var(--spacing-md);
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    
+    .category-btn.active {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+            <li><a href="index.html#products" class="nav-link">Produk</a></li>
+            <li><a href="index.html#customization" class="nav-link">Kustomisasi</a></li>
+            <li><a href="portofolio.html" class="nav-link">Portofolio</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+            <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+            <li>
+              <button id="cartButton" class="btn btn-primary cart-btn">
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                Keranjang <span id="cartCount" class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Blog Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Blog PrintWear</h1>
+        <p>Tips dan informasi seputar sablon, bordir, fashion, dan industri garmen.</p>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="section blog">
+      <div class="container">
+        <div class="blog-filters">
+          <h3 class="filter-title">Kategori</h3>
+          <div class="blog-categories" id="blogCategories">
+            <button class="category-btn active" data-category="all">Semua</button>
+            <button class="category-btn" data-category="tips">Tips & Trik</button>
+            <button class="category-btn" data-category="sablon">Teknik Sablon</button>
+            <button class="category-btn" data-category="bordir">Teknik Bordir</button>
+            <button class="category-btn" data-category="fashion">Fashion</button>
+            <button class="category-btn" data-category="bisnis">Bisnis</button>
+          </div>
+        </div>
+        
+        <div class="blog-grid" id="blogGrid">
+          <!-- Blog Post 1 -->
+          <article class="blog-card" data-category="tips sablon">
+            <a href="blog-detail-1.html" class="blog-image">
+              <img src="sablon.jpg" alt="10 Teknik Sablon yang Perlu Anda Ketahui">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Teknik Sablon</span>
+                <span class="blog-date">10 Mei 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-1.html">10 Teknik Sablon yang Perlu Anda Ketahui</a>
+              </h2>
+              <p class="blog-excerpt">
+                Mengenal berbagai teknik sablon modern dan tradisional, kelebihan dan kekurangan masing-masing, serta tips memilih teknik yang tepat untuk kebutuhan Anda.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Budi Santoso</span>
+                </div>
+                <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 2 -->
+          <article class="blog-card" data-category="bordir tips">
+            <a href="blog-detail-2.html" class="blog-image">
+              <img src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Panduan Lengkap Bordir: Dari Manual hingga Komputer">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Teknik Bordir</span>
+                <span class="blog-date">5 Mei 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-2.html">Panduan Lengkap Bordir: Dari Manual hingga Komputer</a>
+              </h2>
+              <p class="blog-excerpt">
+                Mempelajari teknik bordir dari yang tradisional hingga modern berbasis komputer, serta bagaimana perbedaan kualitas dan hasil yang dihasilkan.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Diana Putri</span>
+                </div>
+                <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 3 -->
+          <article class="blog-card" data-category="fashion">
+            <a href="blog-detail-3.html" class="blog-image">
+              <img src="https://images.unsplash.com/photo-1588117305388-c2631a279f82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Tren Fashion 2025: Kustomisasi dan Personalisasi">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Fashion</span>
+                <span class="blog-date">1 Mei 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-3.html">Tren Fashion 2025: Kustomisasi dan Personalisasi</a>
+              </h2>
+              <p class="blog-excerpt">
+                Melihat tren fashion terbaru di tahun 2025 yang didominasi oleh kustomisasi dan personalisasi, serta bagaimana sablon dan bordir menjadi andalan.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Rina Wijaya</span>
+                </div>
+                <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 4 -->
+          <article class="blog-card" data-category="bisnis tips">
+            <a href="blog-detail-4.html" class="blog-image">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Memulai Bisnis Sablon: Panduan Lengkap Untuk Pemula">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Bisnis</span>
+                <span class="blog-date">25 April 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-4.html">Memulai Bisnis Sablon: Panduan Lengkap Untuk Pemula</a>
+              </h2>
+              <p class="blog-excerpt">
+                Mengenal seluk beluk memulai bisnis sablon dari nol, mulai dari peralatan, modal, strategi pemasaran, hingga mencari klien pertama Anda.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Hendra Gunawan</span>
+                </div>
+                  <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 5 -->
+          <article class="blog-card" data-category="sablon tips">
+            <a href="blog-detail-5.html" class="blog-image">
+              <img src="how'.jpg" alt="Cara Merawat Baju Sablon Agar Tahan Lama">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Tips & Trik</span>
+                <span class="blog-date">20 April 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-5.html">Cara Merawat Baju Sablon Agar Tahan Lama</a>
+              </h2>
+              <p class="blog-excerpt">
+                Tips merawat pakaian bersablon agar tidak cepat rusak, luntur, atau retak, serta panduan mencuci dan menyimpan yang benar.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Siti Nuraini</span>
+                </div>
+                 <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 6 -->
+          <article class="blog-card" data-category="fashion bordir">
+            <a href="blog-detail-6.html" class="blog-image">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Bordir Modern dalam Dunia Fashion Kontemporer">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Fashion</span>
+                <span class="blog-date">15 April 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-6.html">Bordir Modern dalam Dunia Fashion Kontemporer</a>
+              </h2>
+              <p class="blog-excerpt">
+                Eksplorasi penggunaan bordir dalam fashion kontemporer, dari high fashion hingga street style, dan bagaimana teknik tradisional bertemu dengan desain modern.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1523464862212-d6631d073194?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Rika Silviana</span>
+                </div>
+                <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 7 -->
+          <article class="blog-card" data-category="bisnis">
+            <a href="blog-detail-7.html" class="blog-image">
+              <img src="pemasaran.jpg" alt="Strategi Pemasaran Digital untuk Bisnis Sablon dan Bordir">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Bisnis</span>
+                <span class="blog-date">10 April 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-7.html">Strategi Pemasaran Digital untuk Bisnis Sablon dan Bordir</a>
+              </h2>
+              <p class="blog-excerpt">
+                Panduan lengkap memasarkan jasa sablon dan bordir di era digital, dari media sosial, website, hingga marketplace dan tips mendapatkan klien loyal.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Dimas Pratama</span>
+                </div>
+                <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 8 -->
+          <article class="blog-card" data-category="sablon tips">
+            <a href="blog-detail-8.html" class="blog-image">
+              <img src="https://images.unsplash.com/photo-1534809027769-b00d750a6bac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Rahasia Warna Sablon yang Tahan Lama">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Teknik Sablon</span>
+                <span class="blog-date">5 April 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-8.html">Rahasia Warna Sablon yang Tahan Lama</a>
+              </h2>
+              <p class="blog-excerpt">
+                Memahami jenis-jenis tinta sablon, cara mencampur warna, dan teknik fiksasi yang tepat untuk menghasilkan warna sablon yang awet dan tidak luntur.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Budi Santoso</span>
+                </div>
+            <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Blog Post 9 -->
+          <article class="blog-card" data-category="fashion tips">
+            <a href="blog-detail-9.html" class="blog-image">
+              <img src="bahan.jpg" alt="Memilih Bahan Kain yang Tepat untuk Sablon dan Bordir">
+            </a>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category">Tips & Trik</span>
+                <span class="blog-date">1 April 2025</span>
+              </div>
+              <h2 class="blog-title">
+                <a href="blog-detail-9.html">Memilih Bahan Kain yang Tepat untuk Sablon dan Bordir</a>
+              </h2>
+              <p class="blog-excerpt">
+                Panduan lengkap tentang berbagai jenis kain, karakteristiknya, dan kesesuaiannya untuk teknik sablon dan bordir yang berbeda-beda.
+              </p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <div class="author-avatar">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Avatar">
+                  </div>
+                  <span class="author-name">Diana Putri</span>
+                </div>
+              <a href="blog-detail-1.html" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </div>
+          <p>Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama kami.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h4>Navigasi</h4>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#customization">Kustomisasi</a></li>
+              <li><a href="portofolio.html">Portofolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="index.html#about">Tentang Kami</a></li>
+              <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Sablon DTG</a></li>
+              <li><a href="#">Sablon Manual</a></li>
+              <li><a href="#">Bordir Komputer</a></li>
+              <li><a href="#">Desain Grafis</a></li>
+              <li><a href="#">Pembuatan Merchandise</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Cara Pemesanan</a></li>
+              <li><a href="#">Pengiriman</a></li>
+              <li><a href="#">Pembayaran</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <p>&copy; <span id="currentYear"></span> PrintWear. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal (sama seperti di index.html) -->
+  <div id="cartModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Keranjang Belanja</h3>
+        <button class="close-button" id="closeCartBtn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items will be displayed here -->
+          <div class="empty-cart">
+            <svg class="empty-cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <p>Keranjang belanja Anda kosong</p>
+          </div>
+        </div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">Rp 0</span>
+          </div>
+          <div class="summary-row">
+            <span>Biaya lainnya</span>
+            <span id="shippingFee">Rp 10.000</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cartTotal">Rp 10.000</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-block" id="checkoutBtn">Lanjutkan ke Pembayaran</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    // Blog filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const blogCategories = document.getElementById('blogCategories');
+      const categoryButtons = blogCategories.querySelectorAll('.category-btn');
+      const blogPosts = document.querySelectorAll('.blog-card');
+      
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const category = this.dataset.category;
+          
+          // Update active class
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter blog posts
+          blogPosts.forEach(post => {
+            const postCategories = post.dataset.category.split(' ');
+            
+            if (category === 'all' || postCategories.includes(category)) {
+              post.style.display = 'block';
+            } else {
+              post.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

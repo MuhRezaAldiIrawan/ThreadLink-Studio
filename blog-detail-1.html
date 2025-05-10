@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Teknik Sablon yang Perlu Anda Ketahui - PrintWear</title>
+  <meta name="description" content="Mengenal berbagai teknik sablon modern dan tradisional, kelebihan dan kekurangan masing-masing, serta tips memilih teknik yang tepat untuk kebutuhan Anda.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tambahan CSS untuk blog detail -->
+  <style>
+    .blog-header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: var(--spacing-xl) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .blog-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-md);
+      line-height: 1.3;
+    }
+    
+    .blog-meta-header {
+      display: flex;
+      gap: var(--spacing-md);
+      align-items: center;
+      margin-bottom: var(--spacing-md);
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .blog-category-badge {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: var(--white);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+    }
+    
+    .blog-author-header {
+      display: flex;
+      align-items: center;
+    }
+    
+    .blog-author-header .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-right: var(--spacing-sm);
+    }
+    
+    .blog-author-header .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .blog-author-header .author-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-author-header .author-name {
+      font-weight: 500;
+    }
+    
+    .blog-author-header .author-role {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+    
+    .section-blog {
+      padding: var(--spacing-xl) 0;
+      background-color: var(--white);
+    }
+    
+    .blog-container {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--spacing-xl);
+    }
+    
+    .blog-content {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--gray-dark);
+    }
+    
+    .blog-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: var(--spacing-lg) 0 var(--spacing-md);
+      color: var(--dark);
+    }
+    
+    .blog-content h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: var(--spacing-lg) 0 var(--spacing-sm);
+      color: var(--dark);
+    }
+    
+    .blog-content p {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .blog-content ul, .blog-content ol {
+      margin-bottom: var(--spacing-md);
+      padding-left: 1.25rem;
+    }
+    
+    .blog-content li {
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .blog-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      margin: var(--spacing-md) 0;
+    }
+    
+    .blog-content blockquote {
+      border-left: 4px solid var(--primary);
+      padding: var(--spacing-md) var(--spacing-lg);
+      background-color: var(--gray-lightest);
+      margin: var(--spacing-md) 0;
+      font-style: italic;
+    }
+    
+    .blog-content a {
+      color: var(--primary);
+      text-decoration: underline;
+      transition: var(--transition);
+    }
+    
+    .blog-content a:hover {
+      color: var(--primary-dark);
+    }
+    
+    .blog-featured-image {
+      width: 100%;
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-lg);
+      overflow: hidden;
+    }
+    
+    .blog-featured-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .blog-sidebar {
+      position: sticky;
+      top: calc(var(--spacing-lg) + 70px); /* Header height + spacing */
+      align-self: flex-start;
+    }
+    
+    .sidebar-widget {
+      background-color: var(--gray-lightest);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .sidebar-widget h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--spacing-md);
+      color: var(--dark);
+    }
+    
+    .sidebar-posts {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+    
+    .sidebar-post {
+      display: flex;
+      gap: var(--spacing-sm);
+    }
+    
+    .sidebar-post-image {
+      width: 70px;
+      height: 70px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    
+    .sidebar-post-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .sidebar-post-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .sidebar-post-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: var(--spacing-xs);
+      line-height: 1.4;
+    }
+    
+    .sidebar-post-date {
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+    
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+    }
+    
+    .tag {
+      background-color: var(--white);
+      color: var(--gray-dark);
+      font-size: 0.75rem;
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
+    
+    .tag:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+    
+    .blog-share {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-lg);
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid var(--gray-light);
+    }
+    
+    .share-title {
+      font-weight: 600;
+      margin-right: var(--spacing-sm);
+    }
+    
+    .share-button {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      background-color: var(--gray-lightest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-dark);
+      transition: var(--transition);
+    }
+    
+    .share-button:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+    
+    .share-button svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    
+    .blog-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid var(--gray-light);
+    }
+    
+    .blog-nav-link {
+      display: flex;
+      align-items: center;
+      color: var(--gray-dark);
+      transition: var(--transition);
+      max-width: 45%;
+    }
+    
+    .blog-nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .blog-nav-link svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    
+    .blog-nav-prev svg {
+      margin-right: var(--spacing-sm);
+    }
+    
+    .blog-nav-next {
+      text-align: right;
+    }
+    
+    .blog-nav-next svg {
+      margin-left: var(--spacing-sm);
+    }
+    
+    .blog-nav-text {
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .blog-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .blog-sidebar {
+        position: static;
+      }
+      
+      .blog-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="index.html">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+            <li><a href="index.html#products" class="nav-link">Produk</a></li>
+            <li><a href="index.html#customization" class="nav-link">Kustomisasi</a></li>
+            <li><a href="portofolio.html" class="nav-link">Portofolio</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+            <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+            <li>
+              <button id="cartButton" class="btn btn-primary cart-btn">
+                <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                Keranjang <span id="cartCount" class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Blog Header -->
+    <section class="blog-header">
+      <div class="container">
+        <div class="blog-meta-header">
+          <span class="blog-category-badge">Teknik Sablon</span>
+          <span>10 Mei 2025</span>
+        </div>
+        <h1>10 Teknik Sablon yang Perlu Anda Ketahui</h1>
+        <div class="blog-author-header">
+          <div class="author-avatar">
+            <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" alt="Budi Santoso">
+          </div>
+          <div class="author-info">
+            <span class="author-name">Budi Santoso</span>
+            <span class="author-role">Master Printer di PrintWear</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="section-blog">
+      <div class="container">
+        <div class="blog-container">
+          <div class="blog-main">
+            <div class="blog-featured-image">
+              <img src="https://images.unsplash.com/photo-1603188080672-770fbec4d81b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600" alt="Teknik Sablon">
+            </div>
+            
+            <div class="blog-content">
+              <p>Dalam industri sablon, tersedia berbagai teknik yang bisa digunakan sesuai dengan kebutuhan dan budget Anda. Setiap teknik memiliki karakteristik, kelebihan, dan keterbatasan sendiri. Artikel ini akan membahas 10 teknik sablon yang paling populer dan banyak digunakan di industri fashion dan merchandise.</p>
+              
+              <h2>1. Sablon Manual (Screen Printing)</h2>
+              <p>Sablon manual atau screen printing adalah teknik sablon tradisional yang telah digunakan selama berabad-abad. Teknik ini menggunakan screen mesh yang dilapisi emulsi fotosensitif untuk membuat cetakan. Setelah film/desain diletakkan di atas screen dan disinari, area yang tidak terkena cahaya akan terbilas saat dicuci, membentuk stensil untuk tinta.</p>
+              <p>Kelebihan dari sablon manual adalah:</p>
+              <ul>
+                <li>Hasil cetakan yang tajam dan solid</li>
+                <li>Tahan lama dan tidak mudah luntur</li>
+                <li>Cocok untuk produksi massal</li>
+                <li>Bisa menggunakan berbagai jenis tinta khusus (metalik, glow in the dark, plastisol, dll)</li>
+              </ul>
+              <p>Namun, teknik ini membutuhkan persiapan yang cukup lama dan kurang efisien untuk produksi skala kecil atau desain dengan banyak warna.</p>
+              
+              <h2>2. Sablon Digital (DTG - Direct to Garment)</h2>
+              <p>Sablon digital adalah teknik modern yang menggunakan printer khusus untuk mencetak langsung ke kain, mirip seperti mencetak di kertas. Teknologi ini memungkinkan mencetak gambar full color dengan detail tinggi tanpa perlu memisahkan warna.</p>
+              <p>Kelebihan sablon digital antara lain:</p>
+              <ul>
+                <li>Mampu mencetak gambar detail dan gradasi warna kompleks</li>
+                <li>Tidak ada batasan jumlah warna</li>
+                <li>Efisien untuk produksi skala kecil atau custom</li>
+                <li>Proses produksi yang cepat</li>
+              </ul>
+              <p>Kelemahan utamanya adalah biaya per unit yang relatif mahal untuk produksi massal, hasil kurang tahan lama dibandingkan sablon manual, dan keterbatasan dalam mencetak pada bahan tertentu.</p>
+              
+              <h2>3. Sablon Discharge</h2>
+              <p>Sablon discharge adalah teknik yang menggunakan tinta khusus yang dapat menghilangkan warna dasar kain dan menggantinya dengan warna baru. Teknik ini ideal untuk kain gelap, khususnya kain katun.</p>
+              <p>Keunggulan sablon discharge:</p>
+              <ul>
+                <li>Hasil akhir yang lembut pada kain (tidak terasa tebal)</li>
+                <li>Warna yang menyatu dengan kain (bukan menumpuk di atas kain)</li>
+                <li>Tetap terlihat bagus setelah banyak pencucian</li>
+              </ul>
+              <p>Kelemahannya adalah proses yang membutuhkan ventilasi baik karena bahan kimia yang digunakan, dan keterbatasan pada jenis kain tertentu saja (terutama kain alami seperti katun).</p>
+              
+              <h2>4. Sablon Foil</h2>
+              <p>Sablon foil menggunakan lapisan foil metalik yang ditempelkan ke kain dengan bantuan lem panas. Hasilnya adalah efek metalik atau kilap yang sangat mencolok pada desain.</p>
+              <p>Kelebihan teknik foil:</p>
+              <ul>
+                <li>Memberikan efek mewah dan eye-catching</li>
+                <li>Tersedia dalam berbagai warna dan finish</li>
+                <li>Cocok untuk aksen atau detail kecil pada desain</li>
+              </ul>
+              <p>Kelemahan: tidak tahan lama seperti teknik sablon lain, rentan terkelupas jika tidak diaplikasikan dengan benar, dan tidak cocok untuk area desain yang sangat luas.</p>
+              
+              <h2>5. Sablon Vinyl/Cutting</h2>
+              <p>Teknik ini menggunakan lembaran vinyl yang dipotong sesuai desain menggunakan mesin cutting, kemudian ditempelkan ke kain dengan tekanan panas. Sangat populer untuk membuat kaos tim olahraga, nama dan nomor punggung, serta desain dengan warna solid.</p>
+              <p>Kelebihannya:</p>
+              <ul>
+                <li>Sangat tahan lama dan tahan cuci</li>
+                <li>Ideal untuk desain dengan warna solid dan tipografi</li>
+                <li>Proses produksi yang relatif cepat untuk jumlah kecil</li>
+              </ul>
+              <p>Kelemahannya adalah keterbatasan dalam detail dan tidak cocok untuk desain dengan gradasi atau gambar kompleks.</p>
+              
+              <h2>6. Sablon High Density (HD)</h2>
+              <p>Sablon high density menggunakan tinta khusus yang memberikan efek timbul atau 3D pada desain. Teknik ini menghasilkan sablon dengan tekstur yang bisa diraba dan terlihat menonjol.</p>
+              <p>Kelebihan sablon HD:</p>
+              <ul>
+                <li>Memberikan dimensi dan tekstur pada desain</li>
+                <li>Sangat menarik secara visual dan taktil</li>
+                <li>Cocok untuk logo dan desain yang ingin ditonjolkan</li>
+              </ul>
+              <p>Kelemahan: proses pengeringan yang lebih lama, keterbatasan pada detail halus, dan tidak nyaman jika diaplikasikan pada area yang luas atau area yang sering bergesekan.</p>
+              
+              <h2>7. Sablon Plastisol Transfer</h2>
+              <p>Teknik ini mencetak desain pada kertas transfer khusus menggunakan tinta plastisol, kemudian mentransfernya ke kain dengan mesin press panas. Ini sering digunakan untuk merchandise dan produksi skala kecil.</p>
+              <p>Kelebihannya:</p>
+              <ul>
+                <li>Bisa disiapkan terlebih dahulu dan diaplikasikan saat diperlukan</li>
+                <li>Konsistensi kualitas yang tinggi</li>
+                <li>Lebih cepat untuk produksi kecil dibanding sablon manual</li>
+              </ul>
+              <p>Kelemahannya: hasil kurang tahan lama dibanding sablon manual langsung, dan biaya per unit yang lebih tinggi untuk produksi massal.</p>
+              
+              <h2>8. Sablon Water Base</h2>
+              <p>Sablon water base menggunakan tinta berbasis air yang lebih ramah lingkungan. Tinta meresap ke dalam serat kain, memberikan hasil yang sangat lembut dan nyaman dipakai.</p>
+              <p>Kelebihannya:</p>
+              <ul>
+                <li>Sangat lembut pada kain (hampir tidak terasa)</li>
+                <li>Lebih ramah lingkungan karena berbasis air</li>
+                <li>Breathable dan sangat nyaman dipakai</li>
+              </ul>
+              <p>Kelemahannya: warna kurang solid pada kain gelap, proses pengeringan yang lebih lama, dan membutuhkan keahlian khusus untuk hasil optimal.</p>
+              
+              <h2>9. Sablon Flock</h2>
+              <p>Sablon flock menggunakan material serat pendek yang ditempelkan pada kain dengan bantuan panas, memberikan efek beludru atau suede pada desain.</p>
+              <p>Kelebihannya:</p>
+              <ul>
+                <li>Tekstur unik yang terasa lembut seperti beludru</li>
+                <li>Memberikan dimensi pada desain</li>
+                <li>Tersedia dalam berbagai warna</li>
+              </ul>
+              <p>Kelemahannya: rentan rusak jika dicuci tidak hati-hati, tidak cocok untuk detail sangat halus, dan relatif mahal.</p>
+              
+              <h2>10. Sablon Sublimasi</h2>
+              <p>Teknik sublimasi menggunakan tinta khusus yang berubah dari padat menjadi gas saat dipanaskan, yang kemudian meresap ke dalam serat polyester. Hasilnya adalah cetakan dengan detail tinggi yang menyatu sempurna dengan kain.</p>
+              <p>Kelebihannya:</p>
+              <ul>
+                <li>Hasil cetakan yang sangat detail dan foto-realistis</li>
+                <li>Warna cerah yang tahan lama dan tidak luntur</li>
+                <li>Desain menyatu dengan kain (bukan menumpuk di atas kain)</li>
+              </ul>
+              <p>Kelemahannya: hanya bisa digunakan pada kain polyester atau campuran dengan kandungan polyester tinggi, dan tidak efektif pada kain berwarna gelap.</p>
+              
+              <h3>Memilih Teknik Sablon yang Tepat</h3>
+              <p>Dalam memilih teknik sablon, perhatikan faktor-faktor berikut:</p>
+              <ul>
+                <li><strong>Jenis kain:</strong> Tidak semua teknik cocok untuk semua jenis kain.</li>
+                <li><strong>Kompleksitas desain:</strong> Desain dengan detail tinggi atau banyak warna membutuhkan teknik tertentu.</li>
+                <li><strong>Jumlah produksi:</strong> Beberapa teknik lebih ekonomis untuk produksi massal, sementara yang lain lebih cocok untuk produksi kecil.</li>
+                <li><strong>Budget:</strong> Setiap teknik memiliki biaya yang berbeda-beda.</li>
+                <li><strong>Ketahanan yang diinginkan:</strong> Pertimbangkan berapa lama sablon diharapkan bertahan.</li>
+              </ul>
+              
+              <p>Dengan memahami berbagai teknik sablon yang tersedia, Anda dapat membuat keputusan yang lebih baik untuk kebutuhan produksi pakaian atau merchandise Anda. Di PrintWear, kami menawarkan berbagai teknik sablon tersebut untuk memenuhi kebutuhan kustomisasi Anda dengan hasil terbaik.</p>
+              
+              <div class="blog-share">
+                <span class="share-title">Bagikan:</span>
+                <a href="#" class="share-button">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="share-button">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="share-button">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="share-button">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="share-button">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                  </svg>
+                </a>
+              </div>
+              
+              <div class="blog-navigation">
+                <a href="blog.html" class="blog-nav-link blog-nav-prev">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                  </svg>
+                  <span class="blog-nav-text">Kembali ke Blog</span>
+                </a>
+                <a href="blog-detail-2.html" class="blog-nav-link blog-nav-next">
+                  <span class="blog-nav-text">Artikel Selanjutnya</span>
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="blog-sidebar">
+            <div class="sidebar-widget">
+              <h3>Artikel Terbaru</h3>
+              <div class="sidebar-posts">
+                <a href="blog-detail-2.html" class="sidebar-post">
+                  <div class="sidebar-post-image">
+                    <img src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Panduan Lengkap Bordir">
+                  </div>
+                  <div class="sidebar-post-info">
+                    <div class="sidebar-post-title">Panduan Lengkap Bordir: Dari Manual hingga Komputer</div>
+                    <div class="sidebar-post-date">5 Mei 2025</div>
+                  </div>
+                </a>
+                <a href="blog-detail-3.html" class="sidebar-post">
+                  <div class="sidebar-post-image">
+                    <img src="https://images.unsplash.com/photo-1588117305388-c2631a279f82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Tren Fashion 2025">
+                  </div>
+                  <div class="sidebar-post-info">
+                    <div class="sidebar-post-title">Tren Fashion 2025: Kustomisasi dan Personalisasi</div>
+                    <div class="sidebar-post-date">1 Mei 2025</div>
+                  </div>
+                </a>
+                <a href="blog-detail-4.html" class="sidebar-post">
+                  <div class="sidebar-post-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=300" alt="Memulai Bisnis Sablon">
+                  </div>
+                  <div class="sidebar-post-info">
+                    <div class="sidebar-post-title">Memulai Bisnis Sablon: Panduan Lengkap Untuk Pemula</div>
+                    <div class="sidebar-post-date">25 April 2025</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="sidebar-widget">
+              <h3>Topik Populer</h3>
+              <div class="tag-cloud">
+                <a href="#" class="tag">Sablon DTG</a>
+                <a href="#" class="tag">Bordir Komputer</a>
+                <a href="#" class="tag">Desain T-Shirt</a>
+                <a href="#" class="tag">Screen Printing</a>
+                <a href="#" class="tag">Tinta Sablon</a>
+                <a href="#" class="tag">Teknik Bordir</a>
+                <a href="#" class="tag">Merchandise</a>
+                <a href="#" class="tag">Bisnis Fashion</a>
+                <a href="#" class="tag">Kain Printing</a>
+                <a href="#" class="tag">Tips Sablon</a>
+                <a href="#" class="tag">Perawatan Kaos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">
+            <span>Print<span class="logo-accent">Wear</span></span>
+          </div>
+          <p>Jasa sablon dan bordir berkualitas dengan harga terjangkau. Wujudkan desain impian Anda bersama kami.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.059 10.059 0 01-3.13 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.16a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.959 13.959 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-links-column">
+            <h4>Navigasi</h4>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="index.html#customization">Kustomisasi</a></li>
+              <li><a href="portofolio.html">Portofolio</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="index.html#about">Tentang Kami</a></li>
+              <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Layanan</h4>
+            <ul>
+              <li><a href="#">Sablon DTG</a></li>
+              <li><a href="#">Sablon Manual</a></li>
+              <li><a href="#">Bordir Komputer</a></li>
+              <li><a href="#">Desain Grafis</a></li>
+              <li><a href="#">Pembuatan Merchandise</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Cara Pemesanan</a></li>
+              <li><a href="#">Pengiriman</a></li>
+              <li><a href="#">Pembayaran</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <p>&copy; <span id="currentYear"></span> PrintWear. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Modal (sama seperti di index.html) -->
+  <div id="cartModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Keranjang Belanja</h3>
+        <button class="close-button" id="closeCartBtn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItems" class="cart-items">
+          <!-- Cart items will be displayed here -->
+          <div class="empty-cart">
+            <svg class="empty-cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+            <p>Keranjang belanja Anda kosong</p>
+          </div>
+        </div>
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">Rp 0</span>
+          </div>
+          <div class="summary-row">
+            <span>Biaya lainnya</span>
+            <span id="shippingFee">Rp 10.000</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cartTotal">Rp 10.000</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-block" id="checkoutBtn">Lanjutkan ke Pembayaran</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
